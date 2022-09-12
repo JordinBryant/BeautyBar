@@ -24,4 +24,3 @@ module.exports= Service;
 
 
 
-module.exports = Service;

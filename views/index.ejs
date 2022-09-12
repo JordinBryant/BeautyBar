@@ -3,27 +3,27 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Organic Beauty Shop</title>
+    <title>Beauty Shop</title>
 </head>
 
 <body>
     <header>
-        <h1>Welcome to the Shop</h1>
+        <h1>Welcome to the Beauty Shop</h1>
        
             <ul>
          <% for(let i = 0; i < services.length; i++){ %>  
             <li>
-                <a href="/Home/<%= services[i]._id %>"><%= services[i].name%></a>
+                <a href="/Home/<%=services[i]._id %>"><%= services[i].name%></a>
             </li>
-                <form>
-                    
-                <form action="/Home/<%=i;%>?_method=DELETE" method="POST"></form>
+               <span> <form action="/Home/<%=services[i]._id%>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE">
-                  </form>
+       </form>
         <% } %>
         </ul>
+        <!-- <a href="/Home/">Edit</a></span> -->
+    
         <nav>
-            <a href="/Home/new">Add a new service</a>  
+            <a href="/Home/new">Add your service here</a>  
         </nav>
     </header>
 </body>

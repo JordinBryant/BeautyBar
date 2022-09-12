@@ -47,14 +47,22 @@ app.get("/Home/new", (req, res)=>{
  
 //D
 app.delete("/Home/:id", (req, res) => {
-    Service.findByIdAndDelete(req.params.id, (err, data) => {
-        res.redirect("/Home")
-    })
-});
+   Service.findByIdAndDelete(req.params.id, (err,data) => {
+    res.redirect("/Home");
+        });
+    });
+
 
 //U
 //C
 //E
+// app.get("/Home/:id/edit", (req, res) => {
+//     Service.findById(req.params.id, (error, allServices) => {
+//         res.render("edit.ejs", {
+         
+//         })
+//     })
+// })
 //S
 
 app.listen(3000, () => {
