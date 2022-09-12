@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Organic Beauty Shop</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Shop</h1>
+       
+            <ul>
+         <% for(let i = 0; i < services.length; i++){ %>  
+            <li>
+                <a href="/Home/<%= services[i]._id %>"><%= services[i].name%></a>
+            </li>
+                <form>
+                    
+                <form action="/Home/<%=i;%>?_method=DELETE" method="POST"></form>
+                <input type="submit" value="DELETE">
+                  </form>
+        <% } %>
+        </ul>
+        <nav>
+            <a href="/Home/new">Add a new service</a>  
+        </nav>
+    </header>
+</body>
+
+</html>
