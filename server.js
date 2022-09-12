@@ -38,22 +38,24 @@ app.get('/Home', (req, res) => {
 
 //N
 app.get("/Home/new", (req, res)=>{
+    Service.find({}, (error, allServices)=> {
     res.render("new.ejs",{
-        // services: allServices,
+     services: allServices,
     })
-});  
+    })
+});
+ 
 //D
-app.get("/Home/:id" , (req, res)=>{
-    res.render("show_views.ejs" , {
-      services: services[req.params.id],
-})
+app.delete("/Home/:id", (req, res) => {
+    Service.findByIdAndDelete(req.params.id, (err, data) => {
+        res.redirect("/Home")
+    })
 });
 
 //U
 //C
 //E
 //S
-
 
 app.listen(3000, () => {
     console.log('listening....');
