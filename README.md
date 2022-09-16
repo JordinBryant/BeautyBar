@@ -3,7 +3,7 @@
 ## A website that displays a beauty spa services and allows users to make/edit a choice. 
 
 
-[Visit Website]
+[Visit Website](https://beautybar.herokuapp.com/)
 
 # Website Purpose:
 This site is intended to be for a  beauty spa to store and display their client data.
