@@ -11,10 +11,13 @@ This site is intended to be for a  beauty spa to store and display their client 
 
 # Technologies Used:
 
-**EJS**
-**CSS**
-**MongoDB**
-**Postman**
+1.**EJS**
+2.**CSS**
+3.**MongoDB**
+4.**Postman**
+5.**Node.JS.**
+6.**Materialize**
+
 
 
 
