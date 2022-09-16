@@ -14,7 +14,8 @@ This site is intended to be for a  beauty spa to store and display their client 
 1. **EJS**
 2. **JavaScript**
 3. **CSS**
-4. **HTML**
+4. **MongoDB**
+
 
 
 # Website Images:
