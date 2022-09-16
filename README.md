@@ -13,9 +13,8 @@ This site is intended to be for a  beauty spa to store and display their client 
 
 1. **EJS**
 2. **JavaScript**
-3. **jQuery**
-4. **CSS**
-5. **HTML**
+3. **CSS**
+4. **HTML**
 
 
 # Website Images:
