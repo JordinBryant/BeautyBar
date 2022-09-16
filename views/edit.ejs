@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,10 +9,11 @@
 <body>
     <h1>Services</h1>
 
-    <form action= "/Home/<%=services[i]._id%>?_method=PUT" method ="POST">
+    <form action= "/Home/<%=service._id%>?_method=PUT" method ="POST">
         <input type="text" name="name" value="<%=service.name%>"><br>
         <input type="text" name="type" value="<%=service.description%>"><br>
-        <input type="text" name="img" value="<%=service.category%>"><br>
+        <input type="text" name="type" value="<%=service.category%>"><br>
+        <input type="text" name="img" value="<%=service.img%>"><br>
         <input type= "submit" value ="edit service">
 </body>
-</html> -->
+</html>

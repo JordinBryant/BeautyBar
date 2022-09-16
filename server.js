@@ -20,12 +20,7 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/Home', (req, res) => {
-    Service.create(req.body,(error, createdService)=>{
-        res.redirect("/Home")
-    })
-	
-});
+
 
 //I
 app.get('/Home', (req, res) => {
@@ -34,6 +29,10 @@ app.get('/Home', (req, res) => {
         services: allServices,
     })
    })
+});
+
+app.get('/Home/badges', (req, res)=> {
+    res.render("contact.ejs");
 });
 
 //N
@@ -54,17 +53,43 @@ app.delete("/Home/:id", (req, res) => {
 
 
 //U
+app.put("/Home/:id", (req, res) => {
+    Service.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new:true,
+      },
+      (error, allServices) => {
+        res.redirect(`/Home/${req.params.id}`)
+      }  
+    )
+})
 //C
-//E
-// app.get("/Home/:id/edit", (req, res) => {
-//     Service.findById(req.params.id, (error, allServices) => {
-//         res.render("edit.ejs", {
-         
-//         })
-//     })
-// })
-//S
+app.post('/Home', (req, res) => {
+    Service.create(req.body,(error, createdService)=>{
+        res.redirect("/Home")
+    })
+	
+});
 
+//E
+app.get("/Home/:id/edit", (req, res) => {
+    Service.findById(req.params.id, (error, allServices) => {
+        res.render("edit.ejs", {
+        service: allServices        
+        })
+    })
+})
+//S
+app.get('/Home/:id', (req, res) => {
+    Service.findById(req.params.id, (err, foundService) => {
+        res.render('show.ejs', {
+            service: foundService,
+        });
+    });
+
+});
 app.listen(3000, () => {
     console.log('listening....');
 });

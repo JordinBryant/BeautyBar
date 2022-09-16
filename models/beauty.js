@@ -3,16 +3,16 @@ const Schema = mongoose.Schema;
 
 const serviceSchema = new Schema({
     name: String,
-    price: Number,
+    email: String,
     description: String,
-    img: String,
-    time: Number,
+    phone: Number,
     category: String,
+    img: String,
 });
  
 const Service = mongoose.model('Service', serviceSchema);
 
-module.exports= Service;
+module.exports= Service
 
 
 

@@ -2,30 +2,137 @@
 <html>
 
 <head>
+    <title>Beauty Bar</title>
     <meta charset="utf-8">
-    <title>Beauty Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to the Beauty Shop</h1>
+
+    <nav>
+        <div class="nav-wrapper">
+
+
+            <a href="#" class="brand-logo center">Welcome to the Beauty Bar</a>
+
+
+
+
+
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="/Home">Home</a></li>
+                <li><a href="/Home/badges">Contact Info</a></li>
+                <li><a href="/Home/631ce8f4d30885c550405ad1">Style</a></li>
+            </ul>
+            <i class="small material-icons">favorite_border</i>
+
        
-            <ul>
-         <% for(let i = 0; i < services.length; i++){ %>  
-            <li>
-                <a href="/Home/<%=services[i]._id %>"><%= services[i].name%></a>
-            </li>
-               <span> <form action="/Home/<%=services[i]._id%>?_method=DELETE" method="POST">
-                <input type="submit" value="DELETE">
-       </form>
-        <% } %>
-        </ul>
-        <!-- <a href="/Home/">Edit</a></span> -->
+    </nav>
+
+
+
+</header>
     
-        <nav>
-            <a href="/Home/new">Add your service here</a>  
-        </nav>
-    </header>
+   <div> <img class="circle responsive-img"
+        src="https://cdn.dribbble.com/users/5887013/screenshots/18081349/media/535083486844975c5e7b13f833b6b0ee.jpeg"></div>
+
+<style>
+img {
+       
+            display:flex;
+            
+
+
+        }
+     
+</style>
+      
+    
+      
+    <h4>Service options</h4>
+    <ul>
+        <% for(let i=0; i < services.length; i++){ %>
+            <li>
+                <a href="/Home/<%=services[i]._id %>">
+                    <%= services[i].name%>
+                </a>
+            </li>
+
+    
+
+            <span>
+                <form style="padding-left: 150px;" action="/Home/<%=services[i]._id%>?_method=DELETE" method="POST">
+                    <button type="submit" value="DELETE" class="btn-floating btn-large waves-effect waves-light grey"><i
+                            class="material-icons">delete</i></button>
+            </span>
+           
+            </form>
+
+
+            <% } %>
+    </ul>
+
+
+    <a href="/Home/new"><button type="button" class="waves-effect waves-light btn blue-grey lighten-2">Add your service
+            here</button></a>
+    <!--JavaScript at end of body for optimized loading-->
+    <style>
+        h4 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #11143a;
+            font-weight: bold;
+        }
+
+        a {
+            color:rgb(40, 45, 98);
+        }
+
+
+
+    </style>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">About Us</h5>
+                    <p class="grey-text text-lighten-4">Established in September 2022, we are a small buisness with
+                        intent on going global, and helping people worldwide achieve their own perfect beauty standard!
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+
+            </div>
+            <style>
+                body {
+                    background-color: rgb(193, 177, 158);
+                }
+
+                li {
+                    list-style: none;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-size: x-large;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            </style>
+        </div>
+    </footer>
 </body>
 
 </html>
