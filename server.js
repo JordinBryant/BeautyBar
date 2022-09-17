@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 //I
-app.get('/Home', (req, res) => {
+app.get('/', (req, res) => {
    Service.find({},(error, allServices)=> {
     res.render("index.ejs", {
         services: allServices,
@@ -48,7 +48,7 @@ app.get("/Home/new", (req, res)=>{
 //D
 app.delete("/Home/:id", (req, res) => {
    Service.findByIdAndDelete(req.params.id, (err,data) => {
-    res.redirect("/Home");
+    res.redirect("/");
         });
     });
 
@@ -69,7 +69,7 @@ app.put("/Home/:id", (req, res) => {
 //C
 app.post('/Home', (req, res) => {
     Service.create(req.body,(error, createdService)=>{
-        res.redirect("/Home")
+        res.redirect("/")
     })
 	
 });
