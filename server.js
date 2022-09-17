@@ -6,8 +6,9 @@ const Service = require("./models/beauty.js");
 
 const methodOverride = require('method-override');
 
+const MONGODB_URI = process.env.MONGODB_URI;
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(MONGODB_URI , {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
