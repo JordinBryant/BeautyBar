@@ -3,6 +3,7 @@ require('dotenv').config();
 const express= require('express');
 const app = express();
 const Service = require("./models/beauty.js");
+const path = require('path');
 
 const methodOverride = require('method-override');
 
@@ -20,7 +21,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.static(path.join(__dirname,"public")))
 
 
 //I

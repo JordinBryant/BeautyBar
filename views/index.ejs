@@ -5,26 +5,21 @@
     <title>Beauty Bar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="chai.js" type="text/javascript"></script>
 </head>
 
 <body>
 
     <nav>
         <div class="nav-wrapper">
-
-
             <a href="#" class="brand-logo center">Welcome to the Beauty Bar</a>
-
-
-
-
-
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="/Home">Home</a></li>
                 <li><a href="/Home/badges">Contact Info</a></li>
@@ -32,29 +27,25 @@
             </ul>
             <i class="small material-icons">favorite_border</i>
 
-       
     </nav>
 
+    </header>
 
+    <div>
+        <img class="circle responsive-img"
+            src="https://cdn.dribbble.com/users/5887013/screenshots/18081349/media/535083486844975c5e7b13f833b6b0ee.jpeg">
+    </div>
 
-</header>
+    <style>
+        /* img {
     
-   <div> <img class="circle responsive-img"
-        src="https://cdn.dribbble.com/users/5887013/screenshots/18081349/media/535083486844975c5e7b13f833b6b0ee.jpeg"></div>
-
-<style>
-img {
-       
             display:flex;
             
+        } */
+    </style>
 
 
-        }
-     
-</style>
-      
-    
-      
+
     <h4>Service options</h4>
     <ul>
         <% for(let i=0; i < services.length; i++){ %>
@@ -64,14 +55,12 @@ img {
                 </a>
             </li>
 
-    
-
             <span>
                 <form style="padding-left: 150px;" action="/Home/<%=services[i]._id%>?_method=DELETE" method="POST">
                     <button type="submit" value="DELETE" class="btn-floating btn-large waves-effect waves-light grey"><i
                             class="material-icons">delete</i></button>
             </span>
-           
+
             </form>
 
 
@@ -83,7 +72,7 @@ img {
             here</button></a>
     <!--JavaScript at end of body for optimized loading-->
     <style>
-        h4 {
+        /* h4 {
             font-family: Georgia, 'Times New Roman', Times, serif;
             color: #11143a;
             font-weight: bold;
@@ -91,10 +80,7 @@ img {
 
         a {
             color:rgb(40, 45, 98);
-        }
-
-
-
+        } */
     </style>
 
     <footer class="page-footer">
@@ -107,7 +93,6 @@ img {
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                  
 
                     </ul>
                 </div>
@@ -119,7 +104,7 @@ img {
 
             </div>
             <style>
-                body {
+                /* body {
                     background-color: rgb(193, 177, 158);
                 }
 
@@ -129,7 +114,7 @@ img {
                     font-size: x-large;
                     text-align: center;
                     font-weight: bold;
-                }
+                } */
             </style>
         </div>
     </footer>
